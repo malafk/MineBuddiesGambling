@@ -1,0 +1,15 @@
+buttons:
+  add:
+    title: "&a&lAdd To Bet"
+    lore:
+      - "&f"
+      - "&7Click to add money to your bet!"
+  remove:
+    title: "&c&lRemove From Bet"
+    lore:
+      - "&f"
+      - "&7Click to remove money to your bet!"
+
+games:
+  mines:
+    title: "&cMines"

@@ -1,0 +1,6 @@
+name: MineBuddiesGambling
+version: '${project.version}'
+main: lol.maltest.minebuddiesgambling.MineBuddiesGambling
+api-version: 1.19
+authors: [ maltest ]
+description: Gambling is good for you
