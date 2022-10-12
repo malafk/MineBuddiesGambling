@@ -28,6 +28,14 @@ public class ConfigUtil {
         return new ItemUtil(Material.RED_DYE).setDisplayName(get("buttons.remove.title")).setLore(getList("buttons.remove.lore")).build();
     }
 
+    public ItemStack getMinesButton() {
+        return new ItemUtil(getMaterial("games.mines.buttons.minesonboard.type")).setDisplayName(get("games.mines.buttons.minesonboard.title")).setLore(getList("games.mines.buttons.minesonboard.lore")).build();
+    }
+
+    public ItemStack getTotalBet(String bet) {
+        return new ItemUtil(Material.LIGHT_BLUE_DYE).setDisplayName(get("buttons.total.title")).setLore(replaceInList(getList("buttons.total.lore"), "%bet%", bet)).build();
+    }
+
 
     private String get(String path) {
         return ChatUtil.color(plugin.getConfig().getString(path, path + " not found."));
@@ -39,6 +47,18 @@ public class ConfigUtil {
             colouredList.add(ChatUtil.color(string));
         }
         return colouredList;
+    }
+
+    private ArrayList<String> replaceInList(ArrayList<String> list, String replace, String to) {
+        ArrayList<String> newList = new ArrayList<>();
+        for(String s : list) {
+            newList.add(s.replace(replace, to));
+        }
+        return newList;
+    }
+
+    private Material getMaterial(String path) {
+        return Material.valueOf(plugin.getConfig().getString(path));
     }
 
 }

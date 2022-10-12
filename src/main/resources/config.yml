@@ -9,7 +9,20 @@ buttons:
     lore:
       - "&f"
       - "&7Click to remove money to your bet!"
+  total:
+    title: "&b&lTotal Bet"
+    lore:
+      - "&f"
+      - "&7You are currently betting"
+      - " &b%bet%"
 
 games:
   mines:
     title: "&cMines"
+    mines: 10
+    buttons:
+      minesonboard:
+        type: TNT
+        title: "&7Mines on board"
+        lore:
+          - "&7There are &b%mines% &7on the board!"

@@ -4,6 +4,7 @@ import lol.maltest.minebuddiesgambling.MineBuddiesGambling;
 import lol.maltest.minebuddiesgambling.util.ChatUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
 
 public class GuiManager {
 
@@ -15,5 +16,7 @@ public class GuiManager {
 
     public void openMinesGui() {
         Inventory inventory = Bukkit.createInventory(null, 27, plugin.configUtil.getMineTitle());
+
+
     }
 }
